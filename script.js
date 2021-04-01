@@ -36,7 +36,6 @@ var score = 0; // aantal behaalde punten
 
 
 
-
 /* ********************************************* */
 /*      functies die je gebruikt in je game      */
 /* ********************************************* */
@@ -46,8 +45,7 @@ var score = 0; // aantal behaalde punten
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-  fill("white");
-  rect(20, 20, width - 2 * 20, height - 2 * 20);
+  fill("black");
 };
 
 
@@ -150,7 +148,8 @@ function setup() {
   createCanvas(1280, 720);
 
   // Kleur de achtergrond grijs, zodat je het kunt zien
-  background('grey');
+  background('black');
+
 }
 
 
