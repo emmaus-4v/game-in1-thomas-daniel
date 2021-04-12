@@ -33,8 +33,11 @@ var Batje2Y = 0;   // y-positie van Batje2
 
 var score = 0; // aantal behaalde punten
 
+var KEY_UP1 = 87;
+var KEY_DOWN1 = 83;
 
-
+var KEY_UP2 = 38;
+var KEY_DOWN2 = 40;
 
 /* ********************************************* */
 /*      functies die je gebruikt in je game      */
@@ -86,7 +89,14 @@ var tekenBatje1 = function(x, y) {
  * Updatet globale variabelen met positie van Batje2 of tegenBatje1
  */
 var beweegBatje2 = function() {
-    
+    if (keyIsDown(KEY_UP2)){
+        y = y + 1;
+    }
+
+    if (keyIsDown(KEY_DOWN2)){
+        y = y - 1;
+    }
+
 };
 
 
@@ -103,6 +113,13 @@ var beweegKogel = function() {
  * Updatet globale variabele Batje1X en Batje1Y
  */
 var beweegBatje1 = function() {
+    if (keyIsDown(KEY_UP1)) {
+        y = y + 1;
+    }
+
+    if (keyIsDown(KEY_DOWN1)) {
+        y = y - 1;
+    }
 
 };
 
