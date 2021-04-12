@@ -22,14 +22,14 @@ const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
-var spelerX = 200; // x-positie van speler
-var spelerY = 100; // y-positie van speler
+var Batje1X = 200; // x-positie van Batje1
+var Batje1Y = 100; // y-positie van Batje1
 
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
 
-var vijandX = 0;   // x-positie van vijand
-var vijandY = 0;   // y-positie van vijand
+var Batje2X = 0;   // x-positie van Batje2
+var Batje2Y = 0;   // y-positie van Batje2
 
 var score = 0; // aantal behaalde punten
 
@@ -50,11 +50,11 @@ var tekenVeld = function () {
 
 
 /**
- * Tekent de vijand
+ * Tekent de Batje2
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
-var tekenVijand = function(x, y) {
+var tekenBatje2 = function(x, y) {
     
 
 };
@@ -72,20 +72,20 @@ var tekenKogel = function(x, y) {
 
 
 /**
- * Tekent de speler
+ * Tekent de Batje1
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
-var tekenSpeler = function(x, y) {
+var tekenBatje1 = function(x, y) {
   fill("white");
   ellipse(x, y, 50, 50);
 };
 
 
 /**
- * Updatet globale variabelen met positie van vijand of tegenspeler
+ * Updatet globale variabelen met positie van Batje2 of tegenBatje1
  */
-var beweegVijand = function() {
+var beweegBatje2 = function() {
     
 };
 
@@ -100,29 +100,29 @@ var beweegKogel = function() {
 
 /**
  * Kijkt wat de toetsen/muis etc zijn.
- * Updatet globale variabele spelerX en spelerY
+ * Updatet globale variabele Batje1X en Batje1Y
  */
-var beweegSpeler = function() {
+var beweegBatje1 = function() {
 
 };
 
 
 /**
- * Zoekt uit of de vijand is geraakt
- * @returns {boolean} true als vijand is geraakt
+ * Zoekt uit of de Batje2 is geraakt
+ * @returns {boolean} true als Batje2 is geraakt
  */
-var checkVijandGeraakt = function() {
+var checkBatje2Geraakt = function() {
 
   return false;
 };
 
 
 /**
- * Zoekt uit of de speler is geraakt
- * bijvoorbeeld door botsing met vijand
- * @returns {boolean} true als speler is geraakt
+ * Zoekt uit of de Batje1 is geraakt
+ * bijvoorbeeld door botsing met Batje2
+ * @returns {boolean} true als Batje1 is geraakt
  */
-var checkSpelerGeraakt = function() {
+var checkBatje1Geraakt = function() {
     
   return false;
 };
@@ -161,24 +161,24 @@ function setup() {
 function draw() {
   switch (spelStatus) {
     case SPELEN:
-      beweegVijand();
+      beweegBatje2();
       beweegKogel();
-      beweegSpeler();
+      beweegBatje1();
       
-      if (checkVijandGeraakt()) {
+      if (checkBatje2Geraakt()) {
         // punten erbij
-        // nieuwe vijand maken
+        // nieuwe Batje2 maken
       }
       
-      if (checkSpelerGeraakt()) {
+      if (checkBatje1Geraakt()) {
         // leven eraf of gezondheid verlagen
-        // eventueel: nieuwe speler maken
+        // eventueel: nieuwe Batje1 maken
       }
 
       tekenVeld();
-      tekenVijand(vijandX, vijandY);
+      tekenBatje2(Batje2X, Batje2Y);
       tekenKogel(kogelX, kogelY);
-      tekenSpeler(spelerX, spelerY);
+      tekenBatje1(Batje1X, Batje1Y);
 
       if (checkGameOver()) {
         spelStatus = GAMEOVER;
