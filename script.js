@@ -48,7 +48,7 @@ var KEY_DOWN2 = 40;
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-  fill("black");
+  fill("white");
 };
 
 
@@ -80,8 +80,8 @@ var tekenKogel = function(x, y) {
  * @param {number} y y-coördinaat
  */
 var tekenBatje1 = function(x, y) {
-  fill("white");
-  ellipse(x, y, 50, 50);
+  fill("blue");
+  rect(x, y, 25, 125);
 };
 
 
@@ -114,11 +114,11 @@ var beweegKogel = function() {
  */
 var beweegBatje1 = function() {
     if (keyIsDown(KEY_UP1)) {
-        y = y + 1;
+        Batje1Y = y + 1;
     }
 
     if (keyIsDown(KEY_DOWN1)) {
-        y = y - 1;
+        Batje1Y = y - 1;
     }
 
 };
