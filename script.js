@@ -84,6 +84,10 @@ var tekenBatje1 = function(x, y) {
   rect(x, y, 25, 125);
 };
 
+var tekenBatje2 = function(x, y) {
+  fill("red");
+  rect(x, y, 25, 125);
+
 
 /**
  * Updatet globale variabelen met positie van Batje2 of tegenBatje1
@@ -201,5 +205,4 @@ function draw() {
         spelStatus = GAMEOVER;
       }
       break;
-  }
-}
+  };
