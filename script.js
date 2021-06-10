@@ -81,7 +81,7 @@ var tekenKogel = function(x, y) {
  */
 var tekenBatje1 = function(x, y) {
   fill("blue");
-  rect(x, y, 25, 125);
+  rect(10, 10, 25, 125);
 };
 
 var tekenBatje2 = function(x, y) {
@@ -205,4 +205,6 @@ function draw() {
         spelStatus = GAMEOVER;
       }
       break;
-  };
+  }
+}
+}
