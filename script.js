@@ -10,6 +10,8 @@
  */
 
 
+
+
 /* ********************************************* */
 /* globale variabelen die je gebruikt in je game */
 /* ********************************************* */
@@ -41,12 +43,15 @@ var KEY_DOWN2 = 40;
 /* ********************************************* */
 
 
-/*** Tekent het speelveld */
+/**
+ * Tekent het speelveld
+ */
 var tekenVeld = function () {
   fill("white");
 };
 
-/* Tekent de kogel of de bal
+/**
+ * Tekent de kogel of de bal
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
@@ -56,12 +61,14 @@ var tekenKogel = function(x, y) {
 
 };
 
-
-/* Tekent de Batje 1 en Batje 2 */
+/**
+ * Tekent de Batje 1 en Batje 2
+ * @param {number} x x-coördinaat
+ * @param {number} y y-coördinaat
+ */
 var tekenBatje1 = function(x, y) {
   fill("blue");
   rect(Batje1X, Batje2Y, 15, 100);
-
 };
 
 var tekenBatje2 = function(x, y) { 
@@ -70,44 +77,34 @@ var tekenBatje2 = function(x, y) {
 };
 
 
-/* Updatet globale variabelen met positie van Batje2 of tegenBatje1
+/**
+ * Updatet globale variabelen met positie van vijand of tegenspeler
  */
 var beweegBatje2 = function() {
-    if (keyIsDown(KEY_UP2)){
-        y = y + 1;
-    }
-
-    if (keyIsDown(KEY_DOWN2)){
-        y = y - 1;
-    }
 
 };
 
 
-/ * Updatet globale variabelen met positie van kogel of bal
- 
+/**
+ * Updatet globale variabelen met positie van kogel of bal
+ */
 var beweegKogel = function() {
 
 };
 
 
-/* Kijkt wat de toetsen/muis etc zijn.
- * Updatet globale variabele Batje1X en Batje1Y
+/**
+ * Kijkt wat de toetsen/muis etc zijn.
+ * Updatet globale variabele spelerX en spelerY
  */
 var beweegBatje1 = function() {
-    if (keyIsDown(KEY_UP1)) {
-        Batje1Y = y + 1;
-    }
-
-    if (keyIsDown(KEY_DOWN1)) {
-        Batje1Y = y - 1;
-    }
 
 };
 
 
-/* Zoekt uit of de Batje2 is geraakt
- * @returns {boolean} true als Batje2 is geraakt
+/**
+ * Zoekt uit of de vijand is geraakt
+ * @returns {boolean} true als vijand is geraakt
  */
 var checkBatje2Geraakt = function() {
 
@@ -115,9 +112,10 @@ var checkBatje2Geraakt = function() {
 };
 
 
-/* Zoekt uit of de Batje1 is geraakt
- * bijvoorbeeld door botsing met Batje2
- * @returns {boolean} true als Batje1 is geraakt
+/**
+ * Zoekt uit of de speler is geraakt
+ * bijvoorbeeld door botsing met vijand
+ * @returns {boolean} true als speler is geraakt
  */
 var checkBatje1Geraakt = function() {
 
@@ -125,7 +123,8 @@ var checkBatje1Geraakt = function() {
 };
 
 
-/* Zoekt uit of het spel is afgelopen
+/**
+ * Zoekt uit of het spel is afgelopen
  * @returns {boolean} true als het spel is afgelopen
  */
 var checkGameOver = function() {
@@ -134,7 +133,8 @@ var checkGameOver = function() {
 };
 
 
-/* setup
+/**
+ * setup
  * de code in deze functie wordt één keer uitgevoerd door
  * de p5 library, zodra het spel geladen is in de browser
  */
@@ -142,9 +142,8 @@ function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
 
-  // Kleur de achtergrond grijs, zodat je het kunt zien
+  // Kleur de achtergrond blauw, zodat je het kunt zien
   background('black');
-
 }
 
 
