@@ -57,7 +57,7 @@ var tekenVeld = function () {
  */
 var tekenKogel = function(x, y) {
     fill("white");
-    rect(kogelX, kogelY, 40, 40);
+    circle(kogelX, kogelY, 40, 40);
 
 };
 
@@ -81,7 +81,13 @@ var tekenBatje2 = function(x, y) {
  * Updatet globale variabelen met positie van vijand of tegenspeler
  */
 var beweegBatje2 = function() {
+if(keyIsDown(87)){
+    Batje1Y = Batje1Y + 1;
+}
 
+if(keyIsDown(83)){
+Batje1Y = Batje1Y - 1;
+}
 };
 
 
@@ -98,7 +104,12 @@ var beweegKogel = function() {
  * Updatet globale variabele spelerX en spelerY
  */
 var beweegBatje1 = function() {
-
+if(keyIsDown(38)){
+    Batje2Y = Batje2Y + 1;
+}
+if(keyIsDown(40)){
+    Batje2Y = Batje2Y - 1;
+}
 };
 
 
@@ -141,10 +152,14 @@ var checkGameOver = function() {
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
-
   // Kleur de achtergrond blauw, zodat je het kunt zien
   background('black');
+  fill("green");
+  rect(0,0,5,777)
+  fill("green");
+  rect(1275,0,5,777)
 }
+
 
 
 /**
