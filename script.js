@@ -5,12 +5,9 @@
 /* Game opdracht
    Informatica - Emmauscollege Rotterdam
    Template voor een game in JavaScript met de p5 library
-
    Begin met dit template voor je game opdracht,
    voeg er je eigen code aan toe.
  */
-
-
 
 
 /* ********************************************* */
@@ -44,15 +41,12 @@ var KEY_DOWN2 = 40;
 /* ********************************************* */
 
 
-/**
- * Tekent het speelveld
- */
+/*** Tekent het speelveld */
 var tekenVeld = function () {
   fill("white");
 };
 
-/**
- * Tekent de kogel of de bal
+/* Tekent de kogel of de bal
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
@@ -63,9 +57,7 @@ var tekenKogel = function(x, y) {
 };
 
 
-/**
- * Tekent de Batje 1 en Batje 2
- */
+/* Tekent de Batje 1 en Batje 2 */
 var tekenBatje1 = function(x, y) {
   fill("blue");
   rect(Batje1X, Batje2Y, 15, 100);
@@ -78,8 +70,7 @@ var tekenBatje2 = function(x, y) {
 };
 
 
-/**
- * Updatet globale variabelen met positie van Batje2 of tegenBatje1
+/* Updatet globale variabelen met positie van Batje2 of tegenBatje1
  */
 var beweegBatje2 = function() {
     if (keyIsDown(KEY_UP2)){
@@ -93,16 +84,14 @@ var beweegBatje2 = function() {
 };
 
 
-/**
- * Updatet globale variabelen met positie van kogel of bal
- */
+/ * Updatet globale variabelen met positie van kogel of bal
+ 
 var beweegKogel = function() {
 
 };
 
 
-/**
- * Kijkt wat de toetsen/muis etc zijn.
+/* Kijkt wat de toetsen/muis etc zijn.
  * Updatet globale variabele Batje1X en Batje1Y
  */
 var beweegBatje1 = function() {
@@ -117,8 +106,7 @@ var beweegBatje1 = function() {
 };
 
 
-/**
- * Zoekt uit of de Batje2 is geraakt
+/* Zoekt uit of de Batje2 is geraakt
  * @returns {boolean} true als Batje2 is geraakt
  */
 var checkBatje2Geraakt = function() {
@@ -127,29 +115,26 @@ var checkBatje2Geraakt = function() {
 };
 
 
-/**
- * Zoekt uit of de Batje1 is geraakt
+/* Zoekt uit of de Batje1 is geraakt
  * bijvoorbeeld door botsing met Batje2
  * @returns {boolean} true als Batje1 is geraakt
  */
 var checkBatje1Geraakt = function() {
-    
+
   return false;
 };
 
 
-/**
- * Zoekt uit of het spel is afgelopen
+/* Zoekt uit of het spel is afgelopen
  * @returns {boolean} true als het spel is afgelopen
  */
 var checkGameOver = function() {
-    
+
   return false;
 };
 
 
-/**
- * setup
+/* setup
  * de code in deze functie wordt één keer uitgevoerd door
  * de p5 library, zodra het spel geladen is in de browser
  */
@@ -174,12 +159,12 @@ function draw() {
       beweegBatje2();
       beweegKogel();
       beweegBatje1();
-      
+
       if (checkBatje2Geraakt()) {
         // punten erbij
         // nieuwe Batje2 maken
       }
-      
+
       if (checkBatje1Geraakt()) {
         // leven eraf of gezondheid verlagen
         // eventueel: nieuwe Batje1 maken
