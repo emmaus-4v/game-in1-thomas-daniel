@@ -22,14 +22,14 @@ const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
-var Batje1X = 200; // x-positie van Batje1
-var Batje1Y = 100; // y-positie van Batje1
+var Batje1X = 10; // x-positie van Batje1
+var Batje1Y = 300; // y-positie van Batje1
 
-var kogelX = 0;    // x-positie van kogel
-var kogelY = 0;    // y-positie van kogel
+var kogelX = 600;    // x-positie van kogel
+var kogelY = 335;    // y-positie van kogel
 
-var Batje2X = 0;   // x-positie van Batje2
-var Batje2Y = 0;   // y-positie van Batje2
+var Batje2X = 1255;   // x-positie van Batje2
+var Batje2Y = 300;   // y-positie van Batje2
 
 var score = 0; // aantal behaalde punten
 
@@ -51,42 +51,31 @@ var tekenVeld = function () {
   fill("white");
 };
 
-
-/**
- * Tekent de Batje2
- * @param {number} x x-coördinaat
- * @param {number} y y-coördinaat
- */
-var tekenBatje2 = function(x, y) {
-    
-
-};
-
-
 /**
  * Tekent de kogel of de bal
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
 var tekenKogel = function(x, y) {
-
+    fill("white");
+    rect(kogelX, kogelY, 40, 40);
 
 };
 
 
 /**
- * Tekent de Batje1
- * @param {number} x x-coördinaat
- * @param {number} y y-coördinaat
+ * Tekent de Batje 1 en Batje 2
  */
 var tekenBatje1 = function(x, y) {
   fill("blue");
-  rect(x, y, 25, 125);
+  rect(Batje1X, Batje2Y, 15, 100);
+
 };
 
-var tekenBatje2 = function(x, y) {
-  fill("red");
-  rect(x, y, 25, 125);
+var tekenBatje2 = function(x, y) { 
+    fill("red");
+    rect(Batje2X, Batje2Y, 15, 100);
+};
 
 
 /**
@@ -205,4 +194,5 @@ function draw() {
         spelStatus = GAMEOVER;
       }
       break;
-  };
+  }
+}
