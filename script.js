@@ -24,7 +24,7 @@ var spelStatus = SPELEN;
 var Batje1X = 10; // x-positie van Batje1
 var Batje1Y = 320; // y-positie van Batje1
 
-var kogelX = 620;    // x-positie van kogel
+var kogelX = 640;    // x-positie van kogel
 var kogelY = 370;    // y-positie van kogel
 
 var Batje2X = 1255;   // x-positie van Batje2
@@ -159,7 +159,14 @@ function setup() {
     rect(0, 713, 1280, 7); // onderste border
     rect(-1, 0, 7, 780); // linker border
     rect(1275, 0, 7, 780); // rechter border
-
+    rect(637, 25, 7, 50); // lijntjes door midden
+    rect(637, 125, 7, 50); // lijntjes door midden
+    rect(637, 225, 7, 50); // lijntjes door midden
+    rect(637, 325, 7, 50); // lijntjes door midden
+    rect(637, 425, 7, 50); // lijntjes door midden
+    rect(637, 525, 7, 50); // lijntjes door midden
+    rect(637, 625, 7, 50); // lijntjes door midden
+    rect(637, 725, 7, 50); // lijntjes door midden
 }
 
 
