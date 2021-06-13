@@ -11,7 +11,8 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] maak index.html, style.css en script.js met canvas
 - [x] teken batjes
 - [x] beweeg batjes
-- [ ] teken bal & beweeg bal
+- [x] teken bal
+- [ ] beweeg bal
 - [ ] punten op scherm zetten
 - [ ] punten kunnen scoren
 - [ ] uitlegscherm
