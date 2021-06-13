@@ -22,13 +22,13 @@ const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
 var Batje1X = 10; // x-positie van Batje1
-var Batje1Y = 300; // y-positie van Batje1
+var Batje1Y = 320; // y-positie van Batje1
 
-var kogelX = 600;    // x-positie van kogel
-var kogelY = 335;    // y-positie van kogel
+var kogelX = 620;    // x-positie van kogel
+var kogelY = 370;    // y-positie van kogel
 
 var Batje2X = 1255;   // x-positie van Batje2
-var Batje2Y = 300;   // y-positie van Batje2
+var Batje2Y = 320;   // y-positie van Batje2
 
 var score = 0; // aantal behaalde punten
 
@@ -152,12 +152,14 @@ var checkGameOver = function() {
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
-  // Kleur de achtergrond blauw, zodat je het kunt zien
+  // Kleur de achtergrond zwart, zodat je het kunt zien
   background('black');
-  fill("green");
-  rect(0,0,5,777)
-  fill("green");
-  rect(1275,0,5,777)
+  fill("grey");
+    rect(0, 0, 1280, 7); // bovenste border
+    rect(0, 713, 1280, 7); // onderste border
+    rect(-1, 0, 7, 780); // linker border
+    rect(1275, 0, 7, 780); // rechter border
+
 }
 
 
