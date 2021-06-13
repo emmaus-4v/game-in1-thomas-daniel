@@ -81,12 +81,12 @@ var tekenBatje2 = function(x, y) {
  * Updatet globale variabelen met positie van vijand of tegenspeler
  */
 var beweegBatje2 = function() {
-if(keyIsDown(87)){
-    Batje1Y = Batje1Y + 1;
+if(keyIsDown(KEY_DOWN1)){
+    Batje1Y -= 5;
 }
 
-if(keyIsDown(83)){
-Batje1Y = Batje1Y - 1;
+if(keyIsDown(KEY_UP1)){
+    Batje1Y += 5;
 }
 };
 
@@ -104,14 +104,13 @@ var beweegKogel = function() {
  * Updatet globale variabele spelerX en spelerY
  */
 var beweegBatje1 = function() {
-if(keyIsDown(38)){
-    Batje2Y = Batje2Y + 1;
-}
 if(keyIsDown(40)){
-    Batje2Y = Batje2Y - 1;
+    Batje2Y = Batje2Y + 5;
+}
+if(keyIsDown(38)){
+    Batje2Y = Batje2Y - 5;
 }
 };
-
 
 /**
  * Zoekt uit of de vijand is geraakt
@@ -167,8 +166,7 @@ function setup() {
     rect(637, 525, 7, 50); // lijntjes door midden
     rect(637, 625, 7, 50); // lijntjes door midden
     rect(637, 725, 7, 50); // lijntjes door midden
-}
-
+};
 
 
 /**
